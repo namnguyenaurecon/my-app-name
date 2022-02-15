@@ -28,7 +28,7 @@ const App: React.FC = () => {
   const authClient = useMemo(
     () =>
       new BrowserAuthorizationClient({
-        scope: process.env.IMJS_AUTH_CLIENT_SCOPES ?? "",
+        scope: "imodelaccess:read itwinjs imodels:read realitydata:read",
         clientId: process.env.IMJS_AUTH_CLIENT_CLIENT_ID ?? "",
         redirectUri: process.env.IMJS_AUTH_CLIENT_REDIRECT_URI ?? "",
         postSignoutRedirectUri: process.env.IMJS_AUTH_CLIENT_LOGOUT_URI,
